@@ -1,0 +1,59 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.example.myapplication'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.myapplication"
+        minSdk 33
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+    // Material
+    implementation libs.material
+
+    // AndroidX
+    implementation libs.appcompat
+
+    // Room
+    implementation libs.roomCommon
+    implementation libs.roomRuntime
+    annotationProcessor libs.roomCompiler
+
+    // Retrofit, Gson
+    implementation libs.retrofit
+    implementation libs.converterGson
+    implementation libs.gson
+
+    // Cronet
+    implementation libs.cronetEmbedded
+
+    // Lottie
+    implementation libs.lottieV600
+    implementation libs.lottieV600
+
+    // Test
+    testImplementation libs.junit
+    androidTestImplementation libs.extJunit
+    androidTestImplementation libs.espressoCore
+}
