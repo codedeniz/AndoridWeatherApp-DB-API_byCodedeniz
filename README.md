@@ -1,11 +1,10 @@
-This app is made of java.
+This application is built using Java.
 
-This app is using api for fetching weather.
+It utilizes an API to fetch real-time weather data.
+The application leverages the Android ROM as its database solution.
+For testing on an Android device, I have included a pre-built APK in the package.
 
-This app using Android ROM for DB.
+Thank you for your interest!
 
-If you want to test it on an android device i included a builded apk.
+- Codedeniz
 
-Thank you.
-
-codedeniz
